@@ -1,32 +1,66 @@
+
 # datafun-04-eda
-# This .gitignore file lists content that does NOT need to be tracked in the project history
 
-# ----------------------------------------
-# macOS system files (always ignore)
-# ----------------------------------------
-.DS_Store
+A small exploratory data analysis (EDA) project scaffold for the Datafun series. This repository contains notebooks, helper scripts and documentation to explore, clean, visualize, and summarise datasets used throughout the course or personal data analysis exercises.
 
-# ----------------------------------------
-# Visual Studio Code (always ignore)
-# ----------------------------------------
-.vscode/
+**Goals**
+- Provide a reproducible environment for EDA experiments.
+- Include examples of common data cleaning and visualization workflows.
+- Offer a lightweight starting point for assignment or self-study in data analysis.
 
-# ----------------------------------------
-# Environment variables and secrets (always ignore)
-# ----------------------------------------
-.env
-.env.*
+**Contents**
+- `requirements.txt` — packages and setup instructions for a virtual environment.
+- `README.md` — this file with project overview and usage instructions.
 
-# ----------------------------------------
-# Python (ignore for all Python projects)
-# ----------------------------------------
-.venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+Getting started
+---------------
 
-# ----------------------------------------
-# Jupyter Notebook (basic ignore)
-# ----------------------------------------
-.ipynb_checkpoints
+1. Create and activate a Python virtual environment in the project root:
+
+	 - Windows PowerShell:
+
+		 ```powershell
+		 py -m venv .venv
+		 .\.venv\Scripts\Activate
+		 ```
+
+	 - macOS / Linux:
+
+		 ```bash
+		 python3 -m venv .venv
+		 source .venv/bin/activate
+		 ```
+
+2. Upgrade packaging tools and install dependencies:
+
+	 - Windows PowerShell:
+
+		 ```powershell
+		 py -m pip install --upgrade pip setuptools wheel
+		 py -m pip install --upgrade -r requirements.txt --timeout 100
+		 ```
+
+	 - macOS / Linux:
+
+		 ```bash
+		 python3 -m pip install --upgrade pip setuptools wheel
+		 python3 -m pip install --upgrade -r requirements.txt --timeout 100
+		 ```
+
+Usage
+-----
+
+- Open any Jupyter notebooks in this repository using VS Code or JupyterLab. Make sure to select the `.venv` interpreter/kernel.
+- Use the included scripts and notebooks as templates for your own datasets: load, clean, visualise, and report findings.
+
+Dependencies
+------------
+The project includes a comprehensive `requirements.txt` with common EDA packages such as `jupyter`, `ipykernel`, `matplotlib`, and `seaborn`. Review the file and uncomment or add packages you need.
+
+Contributing
+------------
+
+- Add notebooks and small utilities that illustrate EDA techniques.
+- Keep the `requirements.txt` up-to-date with any new packages you add.
+- Open an issue or submit a pull request with improvements or fixes.
+
