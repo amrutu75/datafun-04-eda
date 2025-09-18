@@ -1,96 +1,66 @@
-# Introduction to Jupyter Notebooks in VS Code
 
-Jupyter Notebooks are a popular way to create and share documents for data analytics. 
-They are interactive, easy to share, and support a wide variety of data science tools.
+# datafun-04-eda
 
-When employers ask for years of experience with a language, it's not the syntax - that can be learned in a few days. 
-It's the experience with the tools, libraries, and frameworks that takes time.
+A small exploratory data analysis (EDA) project scaffold for the Datafun series. This repository contains notebooks, helper scripts and documentation to explore, clean, visualize, and summarise datasets used throughout the course or personal data analysis exercises.
 
-IMPORTANT: To run Jupyter within VS Code, use the Jupyter extension. Go to the Extensions pane on the left sidebar (the icon looks like four squares), searching for "Jupyter," and installing the "Jupyter" extension provided by Microsoft.
+**Goals**
+- Provide a reproducible environment for EDA experiments.
+- Include examples of common data cleaning and visualization workflows.
+- Offer a lightweight starting point for assignment or self-study in data analysis.
 
-## Project Requirements
+**Contents**
+- `requirements.txt` — packages and setup instructions for a virtual environment.
+- `README.md` — this file with project overview and usage instructions.
 
-- VS Code
-- Git
-- Python 
+Getting started
+---------------
 
-## Professional Python Workflow
+1. Create and activate a Python virtual environment in the project root:
 
-See [pro-analytics-01](https://github.com/denisecase/pro-analytics-01/)
+	 - Windows PowerShell:
 
-## Commands to Manage Virtual Environment
+		 ```powershell
+		 py -m venv .venv
+		 .\.venv\Scripts\Activate
+		 ```
 
-For Windows PowerShell (change if using Mac/Linux).
-Verify that all required packages are included in requirements.txt (and have NOT been commented out).
+	 - macOS / Linux:
 
-```powershell
-py -m venv .venv
-.\.venv\Scripts\activate
-py -m pip install --upgrade pip setuptools wheel
-py -m pip install --upgrade -r requirements.txt
-```
+		 ```bash
+		 python3 -m venv .venv
+		 source .venv/bin/activate
+		 ```
 
-## Commands to Run Python Scripts
+2. Upgrade packaging tools and install dependencies:
 
-Remember to activate your .venv (and install packages if they haven't been installed yet) before running files.
+	 - Windows PowerShell:
 
-```shell
-py demo-script.py
-```
+		 ```powershell
+		 py -m pip install --upgrade pip setuptools wheel
+		 py -m pip install --upgrade -r requirements.txt --timeout 100
+		 ```
 
-## Commands to Git add-commit-push
+	 - macOS / Linux:
 
-```shell
-git add .
-git commit -m "custom message"
-git push -u origin main
-```
+		 ```bash
+		 python3 -m pip install --upgrade pip setuptools wheel
+		 python3 -m pip install --upgrade -r requirements.txt --timeout 100
+		 ```
 
-## Task 1: Use and Explore the Demo Project / Repository / Notebook
+Usage
+-----
 
-### Step 1: Copy and Clone the Example Repository
-1. Click "Use this template" on this example repository (if it's not a template, click "Fork" instead).
-2. Clone the repository to your machine:
-   git clone example-repo-url
-3. Open your new cloned repository in VS Code.
+- Open any Jupyter notebooks in this repository using VS Code or JupyterLab. Make sure to select the `.venv` interpreter/kernel.
+- Use the included scripts and notebooks as templates for your own datasets: load, clean, visualise, and report findings.
 
-### Step 2: Set Up and Run the Demo Notebook
-Next, create and activate a virtual environment for this project. 
-Also install additional dependencies required for this project.
-See [requirements.txt](requirements.txt) for detailed instructions. 
+Dependencies
+------------
+The project includes a comprehensive `requirements.txt` with common EDA packages such as `jupyter`, `ipykernel`, `matplotlib`, and `seaborn`. Review the file and uncomment or add packages you need.
 
-A. Create .venv
-B. Activate .venv
-C. Install dependencies into .venv
-D. Select VS Code interpreter to use .venv
+Contributing
+------------
 
-### Step 3: Open Notebook, Create/Select Kernel
-1. Open the provided Jupyter Notebook (`demo-notebook.ipynb`):
-2. Create and select the notebook kernel. See [requirements.txt](requirements.txt) **Step E** for detailed instructions. 
+- Add notebooks and small utilities that illustrate EDA techniques.
+- Keep the `requirements.txt` up-to-date with any new packages you add.
+- Open an issue or submit a pull request with improvements or fixes.
 
-### Step 4: Explore the Notebook Cells and Code
-Open the Notebook and click Run all to execute it.
-- Explore how notebooks have cells. 
-- Our notebook cells are either Markdown or Python. 
-- Try to add new cells.
-- Try to change the type of a cell.
-- Try some Markdown in a Markdown cell.
-- Try some Python in a Python cell. 
-- Review the code and see how it works. 
-
----
-
-## Troubleshooting and Tips
-- See [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
-
-## Additional Resources 
-- See [RESOURCES.md](docs/RESOURCES.md)
-
-## Reference Projects
-
-Custom implementation of the example project at 
-[datafun-04-notebooks](https://github.com/denisecase/datafun-04-notebooks/)
-
-- [datafun-03-analytics](https://github.com/denisecase/datafun-03-analytics/)
-- [datafun-02-project-setup](https://github.com/denisecase/datafun-02-project-setup/)
-- [datafun-01-utils](https://github.com/denisecase/datafun-01-utils/)
